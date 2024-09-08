@@ -52,36 +52,31 @@
     </div>
 
     <style>
-        @media print {
-          body*{
-            visibility: hidden;
-          }
-      
-          #buildresume, #buildresume * {
-            visibility: visible;
-          }
-          
-          h3 {
-            border-radius: 5px;
-            padding: 10px;
-            color: white;
-            background-color: #0080ff;
-            font-size: 1.2em;
-}
-      
-         
-          #buildresume {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-          }
-      
-          #download-resume, #share-resume , #button{
-            display: none;
-          }
+      @media print {
+        /* Hide everything by default */
+        body * {
+          visibility: hidden;
         }
-      </style>
+    
+        /* Only show the resume section */
+        #buildresume, #buildresume * {
+          visibility: visible;
+        }
+    
+        /* Ensure the resume takes the full page */
+        #buildresume {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+    
+        /* Hide the download and share buttons */
+        #download-resume, #share-resume {
+          display: none;
+        }
+      }
+    </style>
 
     <script src="script.js"></script>
 </body>
