@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="fieldsstyle.css">
+</head>
+<body>
+  <div id='container'>
+    <h1>Dynamic Resume Builder</h1>
+    <form id='DynamicResumeForm'>
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label for='name'>Name</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for='email'>Email</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for='phone'>Phone No</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+        <label for='address'>Address</label><br>
+        <input type="text" id="address" name="address" required><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Objective</legend>
+        <label for='objective'>Objective</label><br>
+        <input id="objective" name="objective" required><br>
+      </fieldset> 
+
+      <fieldset>
+        <legend>Education</legend>
+        <label for='education'>Education</label><br>
+        <input id="education" name="education" required><br>
+      </fieldset> 
+
+      <fieldset>
+        <legend>Skills</legend>
+        <label for='skills'>Skills</label><br>
+        <input id="skills" name="skills" required><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Experience</legend>
+        <label for='experience'>Experience</label><br>
+        <input id="experience" name="experience" required><br>
+      </fieldset> 
+
+      <button type="submit">Build Resume</button><br><br>
+    </form><br><br>
+
+    <div id="buildresume"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

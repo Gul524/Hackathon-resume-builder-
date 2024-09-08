@@ -1,75 +1,144 @@
-
-
-    body{
-    background-image: linear-gradient(to right, #0080ff, rgb(17, 209, 243));
+body {
+  background-image: linear-gradient(to right, #0080ff, rgb(17, 209, 243));
+  margin: 0; /* Remove margin for better layout */
+  font-family: Arial, sans-serif; /* Added a font-family for better text readability */
 }
 
-header{
-    background-color: blue;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 10px;
-    padding: 20px;
-    text-align: center;
+header {
+  background-color: blue;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-
-#button,#button:hover{
-    border-radius: 10px;
-    padding: 5px;
-    background-image: linear-gradient(to left, #00eeff, #8ebff0);
-    width: 130px;
-    height: 60px;
-    font-size: 15px;
+#button, #button:hover {
+  border-radius: 10px;
+  padding: 8px 12px;
+  background-image: linear-gradient(to left, #00eeff, #8ebff0);
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  margin: 5px; /* Add margin for better spacing */
+  text-align: center;
 }
 
-#button:hover{
-    width: 135px;
-    height: 65px;
-    font-size: 16px;
+#button:hover {
+  font-size: 15px;
 }
 
-#a4sizepaper{
-    border-radius: 10px;
-    width: 210mm; /* A4 paper width */
-    height: 297mm; /* A4 paper height */
-    background-color: white;
-    margin: 0 auto;
-    padding: 20px;
-
+#a4sizepaper {
+  border-radius: 10px;
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px; /* Limit the max-width for readability on larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
 }
 
-h1{
-    text-align: center;
-    color: #0080ff;
-    font-weight: bold;
-}
-#personalInfo{
-    text-align: center;
-    padding-left: 50mm ;
-   
+#profilephoto img {
+  width: 100%; /* Make the profile photo responsive */
+  max-width: 200px; /* Set a max-width to prevent overly large images */
+  height: auto;
+  border-radius: 10px;
 }
 
-p{
-    padding:0;
-    margin: 0;
+table {
+  width: 100%; /* Ensure the table spans the full width */
 }
 
-h3{
-    border-radius :5px ;
-    padding: 2px;
-    color: white;
-    background-color: #0080ff;
-   
+th, td {
+  padding: 10px;
+  vertical-align: top;
 }
 
-h4{
-    margin-bottom: 0;
+h1 {
+  text-align: center;
+  color: #0080ff;
+  font-weight: bold;
+  font-size: 1.8em; /* Use em for responsive scaling */
+  margin-bottom: 10px;
 }
 
-a{
-    text-decoration: none; 
-    font-weight: bold; 
-    color: white; 
+#personalInfo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+p {
+  padding: 0;
+  margin: 5px 0;
+  line-height: 1.5; /* Added line-height for better readability */
+}
+
+h3 {
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: #0080ff;
+  font-size: 1.2em;
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  #a4sizepaper {
+      width: 100%; /* Set full width on smaller screens */
+      padding: 15px;
+  }
+
+  table, th, td {
+      display: block; /* Make the table block-level for smaller screens */
+      width: 100%;
+  }
+
+  th {
+      text-align: left; /* Align text left for better readability */
+  }
+
+  #profilephoto img {
+      max-width: 150px; /* Adjust the profile photo size for smaller screens */
+  }
+
+  h1 {
+      font-size: 1.5em; /* Adjust font size on smaller screens */
+  }
+
+  h3 {
+      font-size: 1.1em; /* Adjust font size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      padding: 5px 10px;
+  }
+
+  #button {
+      width: 100%; /* Make buttons full width for better tap targets */
+      text-align: center;
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 1.3em; /* Adjust font size for very small screens */
+  }
+
+  h3 {
+      font-size: 1em;
+  }
 }
