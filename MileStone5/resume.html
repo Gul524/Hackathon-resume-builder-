@@ -51,6 +51,38 @@
         <div id="buildresume"></div>
     </div>
 
+    <style>
+        @media print {
+          body*{
+            visibility: hidden;
+          }
+      
+          #buildresume, #buildresume * {
+            visibility: visible;
+          }
+          
+          h3 {
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            background-color: #0080ff;
+            font-size: 1.2em;
+}
+      
+         
+          #buildresume {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+      
+          #download-resume, #share-resume , #button{
+            display: none;
+          }
+        }
+      </style>
+
     <script src="script.js"></script>
 </body>
 </html>
